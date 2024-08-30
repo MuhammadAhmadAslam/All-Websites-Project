@@ -1,0 +1,221 @@
+
+@font-face {
+  font-family: 'pop';
+  src: url(../assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'pop';
+}
+body,html{
+    background-color: #313131 !important;
+}
+.row{
+  margin-top: 90px !important;
+}
+.cards {
+  position: relative;
+  height: 250px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  margin-top: 40px;
+}
+
+.cards img {
+  width: 100%;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.cards:hover {
+  transform: rotate(0deg) scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.cards:hover .card__content {
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 1;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.cards:hover svg {
+  scale: 0;
+  transform: rotate(-45deg);
+}
+
+
+button {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.7em 2em;
+  border: 3px solid #FF0072;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  color: #FF0072;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+button:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: #FF0072;
+  z-index: -1;
+}
+
+button:hover, button:focus {
+  color: white;
+}
+
+button:hover:before, button:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+.buttonDiv{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 30px;
+}
+
+
+
+
+
+
+
+/* From Uiverse.io by mrhyddenn */ 
+.button {
+  display: flex;
+}
+
+.box {
+  width: 35px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  transition: all .8s;
+  cursor: pointer;
+  position: relative;
+  background: rgb(58, 165, 253);
+  overflow: hidden;
+}
+
+.box:before {
+  content: "M";
+  position: absolute;
+  top: 0;
+  background: #0f0f0f;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%);
+  transition: transform .4s;
+}
+
+.box:nth-child(2)::before {
+  transform: translateY(-100%);
+  content: 'O';
+}
+
+.box:nth-child(3)::before {
+  content: 'R';
+}
+
+.box:nth-child(4)::before {
+  transform: translateY(-100%);
+  content: 'E';
+}
+
+.box:nth-child(5)::before {
+  content: '.';
+}
+.box:nth-child(6)::before {
+  content: '.';
+}
+.box:nth-child(7)::before {
+  content: '.';
+}
+
+.button:hover .box:before {
+  transform: translateY(0);
+}
+
+.more-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+footer{
+  background-color: #0f0f0f;
+  color: white;
+  text-align: center;
+  align-items: center;
+  margin-top: 30px !important;
+  height: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+footer a{
+  color: #FF0072;
+  padding-bottom: 2px;
+}
